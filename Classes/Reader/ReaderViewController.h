@@ -31,11 +31,6 @@
  */
 @property (nonatomic, copy) void (^dismissBlock) ();
 
-@property (nonatomic,retain) UIButton *changeModeButton;
-@property (nonatomic,retain) UIButton *zoomLockButton;
-@property (nonatomic,retain) UIButton *changeDirectionButton;
-@property (nonatomic,retain) UIButton *changeLeadButton;
-
 @property (nonatomic,retain) UIImage * imgModeSingle;
 @property (nonatomic,retain) UIImage * imgModeDouble;
 @property (nonatomic,retain) UIImage * imgZoomLock;
@@ -74,6 +69,9 @@
 
 @property (nonatomic, retain) UILabel * numberOfPageTitleToolbar;
 
+@property (nonatomic, retain) OutlineViewController * outlineViewController;
+@property (nonatomic, retain) BookmarkViewController * bookmarksViewController;
+
 @property (nonatomic, retain) SearchViewController * searchViewController;
 @property (nonatomic, retain) MiniSearchView * miniSearchView;
 @property (nonatomic, retain) TextDisplayViewController * textDisplayViewController;
@@ -81,6 +79,8 @@
 @property (nonatomic, readwrite, getter = isMultimediaVisible) BOOL multimediaVisible;
 
 @property (nonatomic, retain) UIPopoverController * reusablePopover;
+
+@property (nonatomic, readwrite) CGSize popoverContentSize;
 
 @property (copy, nonatomic, readwrite) NSString * pageLabelFormat;
 

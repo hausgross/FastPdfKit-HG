@@ -65,8 +65,7 @@ static const NSUInteger FPKEmbeddedAnnotationsAll = FPKEmbeddedAnnotationsAudio|
 /**
  This property let you add the main DocumentViewControllerDelegate.
  */
-
-@property (weak) NSObject<MFDocumentViewControllerDelegate> *documentDelegate;
+@property (weak) id<MFDocumentViewControllerDelegate> documentDelegate;
 
 /**
  If you need to register objects as DocumentViewControllerDelegate you can add them using this method.
@@ -604,18 +603,6 @@ static const NSUInteger FPKEmbeddedAnnotationsAll = FPKEmbeddedAnnotationsAudio|
  * Toolbar. It will return nil if useNavigationToolbar has been set to YES.
  */
 @property (strong, nonatomic) UIToolbar * toolbar;
-
-/**
- * This will return the default toolbar background image. It is a resizable a
- * resizable image.
- */
-+(UIImage *)defaultToolbarBackgroundImage;
-
-/**
- * This is the resizable image used as background for both the embedded navigation
- * bar and the bottom toolbar. If not set will use the defaultToolbarBackgroundImage.
- */
-@property (strong, nonatomic) UIImage * toolbarBackgroundImage;
 
 /**
  * Invoked when the user cancel the page slider movement by touching up outside
